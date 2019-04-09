@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Doctor Who Social Network</title>
+        <!--Use the line below to link to the latest version of D3-->
+        <!--<script src="https://d3js.org/d3.v5.min.js"></script>-->
+        <script type="text/javascript" src="d3.js"></script>   
+    <style> 
+        .header {grid-area: header;}
+        .footer {grid-area: footer;}
+        #network {grid-area: network-graph;}
+        #legend {grid-area: legend;}
+        
+        #grid-container {
+            display: grid;
+            grid-template-areas:
+            'header header'
+            'network-graph legend'
+            'footer footer'
+        }
+        div {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        div.tooltip {
+            font-size: 12px;
+        }
+        a {
+            color: #9370DB;
+            text-decoration: none;
+        }
+    </style>
+    </head>
+    <body>
+    <div id="grid-container">
+        <div class="header">
+            <h1>The Social Web of <i>Doctor Who</i></h1>
+            This social network graph shows the connections between major characters on the British science fiction TV series <i>Doctor Who</i>.<br><br>
+            The Doctor and his (or currently her) companions have been traveling through space and time in the TARDIS since 1963.  This visualization shows the complex connections between characters from different periods of the show.  The "Classic" era ran from 1963 through 1989 and also includes the 1996 TV movie starring Eighth Doctor Paul McGann.  The "New" era started in 2005 when Russell T. Davies revived the show with Ninth Doctor Christopher Eccleston.
+            <br><br>In 2019, the TARDIS is piloted by Jodie Whittaker's Thirteen Doctor, along with her friends Yaz, Ryan and Graham.
+            <br><br>This network is current through Season 11 of New Who, including the 2019 New Year's Day special.
+        </div>
+        <div class="section" id="network"></div>
+        <div class="section" id="legend"></div>
+        <script type="text/javascript" src="network_graph.js"></script>
+        <div class="footer">Data Sources:
+            <ul>
+                <li><a href="https://www.imdb.com/title/tt0056751/" target="_blank">IMDB (Classic Era)</a></li>
+                <li><a href="https://www.imdb.com/title/tt0116118" target="_blank">IMDB (1996 TV Movie)</a></li>
+                <li><a href="https://www.imdb.com/title/tt0436992" target="_blank">IMDB (New Era)</a></li>
+                <li><a href="https://tardis.fandom.com/wiki/Doctor_Who_Wiki" target="_blank">TARDIS Data Core - <i>Doctor Who</i> Wiki</a></li>
+            </ul>
+        </div>
+    </div>
+    </body>
+</html>
